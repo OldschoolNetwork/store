@@ -4,10 +4,10 @@ The Oldschool Network application store for classic Android devices.
 
 ## Download
 
-Current build: **alpha 0.32**, version code **8**.
+Current build: **alpha 0.33**, version code **9**.
 
-- [Download ON Store](https://github.com/OldschoolNetwork/store/releases/download/alpha-0.32/ON-Store-0.32.apk)
-- [Release notes and checksums](https://github.com/OldschoolNetwork/store/releases/tag/alpha-0.32)
+- [Download ON Store](https://github.com/OldschoolNetwork/store/releases/download/alpha-0.33/ON-Store-0.33.apk)
+- [Release notes and checksums](https://github.com/OldschoolNetwork/store/releases/tag/alpha-0.33)
 - [All ON downloads](https://oldschoolnetwork.online/downloads/)
 
 Android **4.0 / API 14 or newer**. This is a universal APK. It uses the persistent Oldschool Network signing key.
