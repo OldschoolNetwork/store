@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.34 — 2026-10-19
+
+Store 0.34 adds a separate Update button beside Open.
+
+- Update appears only when a newer compatible APK exists. It selects the newest compatible version, independently of the version currently selected in the list. Open stays available.
+- After installing the latest version, Update disappears and Open remains.
+- Downloaded updates must match the selected package and version, and the installed application's signing certificate. Downgrades are rejected.
+- Automatic updates recheck the auto-update and network settings throughout downloads and before installation. Wi-Fi only remains enforced when the network changes. Manual Update remains available with auto-update disabled.
+- Optional update summary notifications follow the notification preference. Android still requires the ongoing notification while a foreground download is active.
+
+Android 4.0 / API 14 or newer; universal APK. Signed with the persistent ON key. Update/Open behaviour and disabled-auto-update behaviour were checked on Android 5.1. Silent installation requires full setup.
+
 ## 0.33 — 2026-10-19
 
 Store 0.33 fixes installation progress, account gating and developer attribution.
