@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.33 — 2026-10-19
+
+Store 0.33 fixes installation progress, account gating and developer attribution.
+
+- Automatic installation shows an animated Installing bar. The downloaded-APK button stays hidden during installation, and the cancel control uses the Store style.
+- On a full installation, Store uses Android's INSTALL_PACKAGES permission when it is granted. Root is used only as a fallback when direct privileged installation is unavailable.
+- Removing or disabling Core clears Store's saved login and account token. An account name alone can no longer establish a session.
+- Library requires sign-in; guest users no longer see a cached or local library.
+- A null reply from the server is treated as no reply.
+- Developer labels use the saved studio name. Studio logos no longer fall back to the publisher's personal avatar.
+
+Android 4.0 / API 14 or newer; universal APK. Signed with the same ON key as 0.32. The accompanying server update is needed for canonical studio data. System permission grants and root behaviour depend on the device and installation method.
+
 ## 0.32 — 2026-10-19
 
 ON Store 0.32 connects the catalog, application pages and account collections to the Store API.
