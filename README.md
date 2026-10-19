@@ -4,10 +4,10 @@ The Oldschool Network application store for classic Android devices.
 
 ## Download
 
-Current build: **alpha 0.33**, version code **9**.
+Current build: **alpha 0.34**, version code **10**.
 
-- [Download ON Store](https://github.com/OldschoolNetwork/store/releases/download/alpha-0.33/ON-Store-0.33.apk)
-- [Release notes and checksums](https://github.com/OldschoolNetwork/store/releases/tag/alpha-0.33)
+- [Download ON Store](https://github.com/OldschoolNetwork/store/releases/download/alpha-0.34/ON-Store-0.34.apk)
+- [Release notes and checksums](https://github.com/OldschoolNetwork/store/releases/tag/alpha-0.34)
 - [All ON downloads](https://oldschoolnetwork.online/downloads/)
 
 Android **4.0 / API 14 or newer**. This is a universal APK. It uses the persistent Oldschool Network signing key.
@@ -16,7 +16,7 @@ Android **4.0 / API 14 or newer**. This is a universal APK. It uses the persiste
 
 Store provides applications, games, server-hosted media and reviews. Library keeps applications acquired by your account, including free ones, across your devices. Favorites is a separate collection in the profile menu.
 
-Search, genres, device filters, package version selection and compatibility checks use the shared Store catalog. Core is needed for ON Account and ON Auth features. With ordinary installation, Android asks you to approve package installation. A verified full installation can request root for package installation.
+Search, genres, device filters, package version selection and compatibility checks use the shared Store catalog. Core is needed for ON Account and ON Auth features. With ordinary installation, Android asks you to approve package installation. Full installation uses the privileged package installer when available and root as a fallback. Newer compatible versions have an Update button beside Open. Auto-update and network preferences control background updates.
 
 ## Alpha status
 
