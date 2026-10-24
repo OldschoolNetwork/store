@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.38 — 2026-10-24
+
+- Groups related package permissions into expandable sections with exact permission identifiers.
+- Fixes the Original creator label and public creator headings.
+- Highlights saved favourites and separates Library from Favorites in the profile menu.
+- Loads existing reports for editing while they are pending; reviewed reports are read-only.
+- Works with the server-side review, reaction and report rate limits.
+
+Install server build-0010 before using report editing. Validation: six focused Android 5.1 UI checks passed. Physical Xiaomi firmware was not tested in this release.
+
 ## 0.36 — 2026-10-24
 
 - The library lists acquired applications; applications installed outside Store are no longer added automatically during device sync.
