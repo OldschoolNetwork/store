@@ -2,7 +2,7 @@
 
 The application and game store for Oldschool Network.
 
-Current alpha: **0.36** (version code 12). Android 4.0 / API 14 or later.
+Current alpha: **0.38** (version code 14). Android 4.0 / API 14 or later.
 
 ## Features
 
