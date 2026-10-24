@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.35 — 2026-10-24
+
+Store 0.35 connects catalogue and review features to the updated Store API.
+
+- Curated categories and Store banner links open inside the app.
+- Reviews support like, dislike, share and report actions. Own reviews appear as cards with an Edit pencil; edits are saved locally per account. New ratings start at zero and require a star selection before publishing.
+- Additional report details are optional when choosing Other.
+- Package permissions use readable descriptions and neutral icons. Selecting another APK version updates the permission list, including explicitly empty lists.
+- An arrow replaces the upper Download control while package details are expanded.
+- Maintainers use their public nickname and personal avatar. Own applications use the studio identity. Original creators have their own catalogue pages.
+- The catalogue refreshes after five minutes when returning to Store. Saved package metadata retains ABI and permission information.
+
+Install the matching server update to enable the new category, review and public-profile endpoints. Android 4.0 / API 14 and later; universal APK, signed with the persistent ON certificate. Eleven UI and compatibility checks passed on an isolated Android 5.1 emulator, including a live read-only catalogue check.
+
 ## 0.34 — 2026-10-19
 
 Store 0.34 adds a separate Update button beside Open.
