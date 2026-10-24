@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.36 — 2026-10-24
+
+- The library lists acquired applications; applications installed outside Store are no longer added automatically during device sync.
+- Review cards keep the Edit action beside the author and scale action icons correctly. Empty-review spacing and reaction counts have been adjusted.
+- Public maintainer profiles no longer link to a separate studio.
+
+The matching server update also fixes public-profile images and creator pages, and adds an in-page screenshot and video viewer to the Store website. Existing library entries from earlier automatic imports are preserved because they cannot reliably be distinguished from free acquisitions.
+
+Validation: 10 checks passed on an isolated Android 5.1 emulator.
+
 ## 0.35 — 2026-10-24
 
 Store 0.35 connects catalogue and review features to the updated Store API.
