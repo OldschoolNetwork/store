@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingTop="12dp" android:paddingBottom="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+    <ImageView android:id="@+id/reviewAvatar" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="12dp" android:src="@drawable/ic_profile_placeholder"/>
+    <TextView android:id="@+id/reviewAuthor" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="16sp" android:maxLines="2" android:ellipsize="end" />
+    </LinearLayout>
+    <TextView android:id="@+id/reviewDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#888888" android:layout_marginTop="4dp"/>
+    <LinearLayout android:id="@+id/reviewRating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp" />
+    <TextView android:id="@+id/reviewText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#D8D8D8" android:textSize="14sp" android:layout_marginTop="8dp" />
+    <Button android:id="@+id/reportReviewContent" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Report review" android:textColor="#AAAAAA" android:background="@android:color/transparent"/>
+    <LinearLayout android:id="@+id/reviewReply" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:orientation="vertical" android:visibility="gone" android:padding="10dp" android:background="@drawable/bg_gradient_violet">
+      <TextView android:id="@+id/reviewReplyAuthor" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#FF9800"/>
+      <TextView android:id="@+id/reviewReplyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#DDDDDD" android:layout_marginTop="8dp"/>
+      <Button android:id="@+id/reportReplyContent" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Report reply" android:textColor="#AAAAAA" android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="12dp" />
+</LinearLayout>

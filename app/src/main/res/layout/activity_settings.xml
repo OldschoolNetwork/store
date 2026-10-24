@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_inversion"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/btnBackSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_right"
+            android:rotation="180"
+            android:background="?android:attr/selectableItemBackground"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Settings"
+            android:textColor="#00BCD4"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00BCD4" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOWNLOAD OPTIONS"
+                android:textColor="#00BCD4"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="12dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/cbAutoUpdate"
+                    android:layout_toStartOf="@+id/cbAutoUpdate"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto-update applications"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow ON Store to update your packages automatically"
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/cbAutoUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:buttonTint="#00BCD4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/spinnerDownloadNet"
+                    android:layout_toStartOf="@+id/spinnerDownloadNet"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Download network"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose preferred data connection for new downloads"
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <Spinner
+                    android:id="@+id/spinnerDownloadNet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="#00BCD4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/spinnerUpdateNet"
+                    android:layout_toStartOf="@+id/spinnerUpdateNet"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto-update network"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Restrict automated background data synchronization"
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <Spinner
+                    android:id="@+id/spinnerUpdateNet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="#00BCD4" />
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#33FFFFFF" android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PREFERENCES &amp; NOTIFICATIONS"
+                android:textColor="#00BCD4"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="12dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentStart="true" android:layout_alignParentLeft="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Push Notifications" android:textColor="#FFFFFF" android:textSize="16sp" android:fontFamily="sans-serif-light" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Get alerts for price drops and major store updates" android:textColor="#888888" android:textSize="12sp" android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <CheckBox android:id="@+id/cbNotifications" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:buttonTint="#00BCD4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentStart="true" android:layout_alignParentLeft="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Smart Recommendations" android:textColor="#FFFFFF" android:textSize="16sp" android:fontFamily="sans-serif-light" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adapt store algorithms to prioritize your favorite genres" android:textColor="#888888" android:textSize="12sp" android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <CheckBox android:id="@+id/cbRecommendations" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:buttonTint="#00BCD4" />
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#33FFFFFF" android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SYSTEM &amp; INFO"
+                android:textColor="#00BCD4"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="12dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentStart="true" android:layout_alignParentLeft="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Interface Theme" android:textColor="#FFFFFF" android:textSize="16sp" android:fontFamily="sans-serif-light" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current skin applied to core activities" android:textColor="#888888" android:textSize="12sp" android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Holo Dark"
+                    android:textColor="#00BCD4"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnAboutApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentStart="true" android:layout_alignParentLeft="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About ON Store" android:textColor="#FFFFFF" android:textSize="16sp" android:fontFamily="sans-serif-light" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Build version, architecture, and network credits" android:textColor="#888888" android:textSize="12sp" android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="#FFFFFF" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

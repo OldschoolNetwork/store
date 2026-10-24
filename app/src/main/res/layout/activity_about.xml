@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_inversion"
+    android:orientation="vertical">
+
+    <!-- ===================== ВЕРХНИЙ БАР ===================== -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/btnBackAbout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_right"
+            android:rotation="180"
+            android:background="?android:attr/selectableItemBackground"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="About"
+            android:textColor="#00BCD4"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00BCD4" />
+    </RelativeLayout>
+
+    <!-- ===================== КОНТЕНТ ЦЕНТРА ===================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 1) Лого ON Store -->
+
+        <!-- 2) Лого Oldschool Network -->
+
+        <ImageView
+            android:id="@+id/ivAboutStoreLogo"
+            android:layout_width="328dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/on_store_logo" />
+
+        <!-- 3) Версия из приложения -->
+        <ImageView
+            android:id="@+id/ivAboutNetworkLogo"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="32dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_full"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvAboutVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version: 1.0.0"
+            android:textColor="#00BCD4"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 4) Кнопка Об Oldschool Network (ведет на сайт) -->
+        <LinearLayout
+            android:id="@+id/btnAboutNetwork"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_outline_cyan"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingRight="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Oldschool Network"
+        android:textColor="#00BCD4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light" />
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="24dp" android:background="@drawable/bg_gradient_violet">
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="We’ll be back soon" android:gravity="center" android:textColor="#00BCD4" android:textSize="30sp"/>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="We are carrying out some work to improve ON Store. It will be available again soon.\n\nKind regards,\nOldschool Network Administration" android:gravity="center" android:textColor="#DDDDDD" android:textSize="16sp" android:layout_marginTop="24dp"/>
+ <TextView android:id="@+id/maintenanceComment" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#BBBBBB" android:gravity="center" android:layout_marginTop="24dp"/>
+ <Button android:id="@+id/retryMaintenance" android:layout_width="match_parent" android:layout_height="48dp" android:text="Retry" android:textColor="#00BCD4" android:background="@drawable/btn_outline_cyan" android:layout_marginTop="24dp"/>
+</LinearLayout>

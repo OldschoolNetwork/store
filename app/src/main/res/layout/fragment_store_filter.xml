@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_gradient_violet"
+        android:clipChildren="true"
+        android:clipToPadding="true">
+
+        <ImageView
+            android:layout_width="134dp"
+            android:layout_height="287dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-30dp"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="-30dp"
+            android:alpha="0.15"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_filter_unselected"
+            app:tint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/btnFilterClose"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="4dp"
+                android:src="@drawable/cross"
+                app:tint="#FFFFFF" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Sort by"
+                        android:textColor="#00BCD4"
+                        android:textSize="26sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbSortDownloads" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Downloads" android:textColor="#FFFFFF" android:textSize="16sp" />
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbSortRelevance" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Relevance" android:textColor="#00BCD4" android:textSize="16sp" android:checked="true" />
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbSortSize" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Size" android:textColor="#FFFFFF" android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbSortRating" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Rating" android:textColor="#FFFFFF" android:textSize="16sp" />
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbSortAndroidVer" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Android version" android:textColor="#FFFFFF" android:textSize="16sp" />
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbSortName" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Name" android:textColor="#FFFFFF" android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:background="#00BCD4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbDirLowest" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Lowest first" android:textColor="#FFFFFF" android:textSize="16sp" />
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbDirAZ" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="A-Z" android:textColor="#555555" android:textSize="16sp" android:enabled="false" android:checked="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbDirHighest" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Highest first" android:textColor="#00BCD4" android:textSize="16sp" android:checked="true" />
+                            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbDirZA" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Z-A" android:textColor="#555555" android:textSize="16sp" android:enabled="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:background="#00BCD4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Filter"
+                        android:textColor="#00BCD4"
+                        android:textSize="26sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/cbFilterAll" android:layout_width="match_parent" android:layout_height="wrap_content" app:buttonTint="#00BCD4" android:fontFamily="sans-serif-light" android:text="Select All" android:textColor="#00BCD4" android:textSize="18sp" android:checked="true" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:layout_marginBottom="16dp" android:background="#44FFFFFF" />
+
+                    <LinearLayout
+                        android:id="@+id/containerDynamicCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <View android:layout_width="match_parent" android:layout_height="60dp" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

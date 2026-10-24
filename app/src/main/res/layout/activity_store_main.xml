@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:openDrawer="start"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/iv_menu_toggle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_menu" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/on_store_logo" />
+
+            <ImageView
+                android:id="@+id/iv_top_search_btn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_search"
+                app:tint="#FFFFFF" />
+        </RelativeLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#FF00BCD4" />
+
+        <LinearLayout
+            android:id="@+id/expandable_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/bg_rounded_search"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                app:tint="#FF00BCD4" />
+
+            <EditText
+                android:id="@+id/et_global_search"
+                android:maxLength="100"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:layout_marginLeft="12dp"
+                android:background="@null"
+                android:hint="Search the catalog"
+                android:textColor="#FFFFFFFF"
+                android:textColorHint="#FF707070"
+                android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/searchSuggestions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/main_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/detail_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#575757" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FF111111">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout android:id="@+id/nav_apps" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="?android:attr/selectableItemBackground" android:gravity="center" android:orientation="horizontal">
+                    <ImageView android:id="@+id/iv_nav_apps" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_navbar_apps" app:tint="#FF00BCD4" />
+                    <TextView android:id="@+id/tv_nav_apps" android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:singleLine="true" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="Apps" android:textColor="#FF00BCD4" android:textSize="16sp" android:textStyle="bold" />
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="32dp" android:layout_gravity="center_vertical" android:background="#333333" />
+                <LinearLayout android:id="@+id/nav_games" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="?android:attr/selectableItemBackground" android:gravity="center" android:orientation="horizontal">
+                    <ImageView android:id="@+id/iv_nav_games" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_navbar_games" app:tint="#FF888888" />
+                    <TextView android:id="@+id/tv_nav_games" android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:singleLine="true" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="Games" android:textColor="#FF888888" android:textSize="16sp" />
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="32dp" android:layout_gravity="center_vertical" android:background="#333333" />
+                <LinearLayout android:id="@+id/nav_profile" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="?android:attr/selectableItemBackground" android:gravity="center" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/iv_nav_profile_ring" android:layout_width="28dp" android:layout_height="28dp">
+                        <ImageView android:id="@+id/iv_nav_profile_outline" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_navbar_profile_selected" android:backgroundTint="#FF888888" android:scaleType="fitCenter" />
+                        <ImageView android:id="@+id/iv_nav_profile_avatar" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:layout_margin="3dp" android:scaleType="fitCenter" android:src="@drawable/ic_profile_placeholder" />
+                    </FrameLayout>
+                    <TextView android:id="@+id/tv_nav_profile" android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:singleLine="true" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="Profile" android:textColor="#FF888888" android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@+id/nav_indicator" android:layout_width="120dp" android:layout_height="2dp" android:layout_alignParentTop="true" android:background="#FF00BCD4" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="280dp" android:layout_height="match_parent" android:layout_gravity="start" android:background="#FF1A202C" android:orientation="vertical">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="56dp" android:paddingLeft="16dp" android:paddingRight="16dp">
+            <ImageView android:id="@+id/iv_drawer_menu_close" android:layout_width="24dp" android:layout_height="24dp" android:layout_centerVertical="true" android:background="?android:attr/selectableItemBackground" android:src="@drawable/ic_menu" app:tint="#FF00BCD4" />
+            <ImageView android:layout_width="120dp" android:layout_height="36dp" android:layout_centerInParent="true" android:scaleType="fitCenter" android:src="@drawable/on_store_logo" />
+        </RelativeLayout>
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#FF00BCD4" />
+        <LinearLayout android:id="@+id/drawer_item_main" android:layout_width="match_parent" android:layout_height="56dp" android:background="#FF222834" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="24dp"><ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_home" app:tint="#FF00BCD4" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="Main" android:textColor="#FF00BCD4" android:textSize="18sp" /></LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="16dp" android:background="#FF444444" />
+        <LinearLayout android:id="@+id/drawer_item_best" android:layout_width="match_parent" android:layout_height="56dp" android:background="?android:attr/selectableItemBackground" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="24dp"><ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_leaderboard" app:tint="#FFFFFFFF" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="Best Apps" android:textColor="#FFFFFFFF" android:textSize="18sp" /></LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="16dp" android:background="#FF444444" />
+        <LinearLayout android:id="@+id/drawer_item_notif" android:layout_width="match_parent" android:layout_height="56dp" android:background="?android:attr/selectableItemBackground" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="24dp"><ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_notifications" app:tint="#FFFFFFFF" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="Notifications" android:textColor="#FFFFFFFF" android:textSize="18sp" /></LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="16dp" android:background="#FF444444" />
+        <LinearLayout android:id="@+id/drawer_item_settings" android:layout_width="match_parent" android:layout_height="56dp" android:background="?android:attr/selectableItemBackground" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="24dp"><ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_settings" app:tint="#FFFFFFFF" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="Settings" android:textColor="#FFFFFFFF" android:textSize="18sp" /></LinearLayout>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

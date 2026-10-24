@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+ <TextView android:id="@+id/reportStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading your report…" android:paddingBottom="12dp" />
+ <Spinner android:id="@+id/reportReason" android:layout_width="match_parent" android:layout_height="wrap_content" />
+ <EditText android:id="@+id/reportDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:minLines="3" android:maxLength="1600" android:inputType="textMultiLine|textCapSentences" android:hint="Additional details (optional)" />
+</LinearLayout>

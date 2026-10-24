@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/collectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="28sp" android:textColor="#00BCD4" android:fontFamily="sans-serif-light" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:background="#00BCD4" />
+    <LinearLayout android:id="@+id/collectionFilters" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+      <Button android:id="@+id/collectionFilterButton" android:layout_width="wrap_content" android:layout_height="44dp" android:text="Filter" android:textColor="#00BCD4" android:background="@drawable/btn_outline_cyan" android:paddingLeft="24dp" android:paddingRight="24dp"/>
+      <LinearLayout android:id="@+id/collectionFilterPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingTop="8dp">
+        <Spinner android:id="@+id/libraryDeviceFilter" android:layout_width="match_parent" android:layout_height="48dp" android:contentDescription="Device filter"/>
+        <Spinner android:id="@+id/libraryInstallFilter" android:layout_width="match_parent" android:layout_height="48dp" android:contentDescription="Installation filter"/>
+        <Spinner android:id="@+id/libraryPriceFilter" android:layout_width="match_parent" android:layout_height="48dp" android:contentDescription="Price filter"/>
+        <Spinner android:id="@+id/librarySort" android:layout_width="match_parent" android:layout_height="48dp" android:contentDescription="Sort library"/>
+      </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/collectionStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#AAAAAA" android:paddingTop="8dp" android:paddingBottom="8dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/collectionList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+</LinearLayout>

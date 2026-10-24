@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Иконка приложения (слева) -->
+    <ImageView
+        android:id="@+id/itemAppIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_app_icon_placeholder" />
+
+    <!-- Блок со статистикой справа -->
+    <LinearLayout
+        android:id="@+id/statsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <!-- Строка рейтинга с НОВОЙ ЗВЕЗДОЙ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/itemRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <!-- Исправлено: Используем реальную звезду (ic_star_selected) -->
+            <ImageView
+                android:id="@+id/itemStarIcon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_star_selected"
+                app:tint="#00BCD4" /> <!-- Окрашиваем в циан -->
+        </LinearLayout>
+
+        <!-- Строка скачиваний -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/itemDownloads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.2k"
+                android:textColor="#A0A0A0"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_download_arrow"
+                app:tint="#A0A0A0"
+                android:layout_marginLeft="4dp" />
+        </LinearLayout>
+
+        <!-- Строка цены -->
+        <TextView
+            android:id="@+id/itemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Free"
+            android:textColor="#4CAF50"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Центральный блок: Название и разработчик -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/statsLayout"
+        android:layout_toEndOf="@id/itemAppIcon"
+        android:orientation="vertical"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/statsLayout"
+        android:layout_toRightOf="@id/itemAppIcon"
+        android:layout_marginLeft="16dp">
+
+        <TextView
+            android:id="@+id/itemAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="App Name"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/itemAppUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="Developer"
+            android:textColor="#A0A0A0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Разделительная линия снизу -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/itemAppIcon"
+        android:layout_marginTop="16dp"
+        android:background="#404040" />
+
+</RelativeLayout>

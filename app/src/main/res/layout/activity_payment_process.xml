@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- ================= 1. ЭКРАН ПОДТВЕРЖДЕНИЯ (Are you sure?) ================= -->
+    <RelativeLayout
+        android:id="@+id/stateConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:visibility="visible">
+
+        <!-- Статичные нижние кнопки -->
+        <LinearLayout
+            android:id="@+id/layoutConfirmButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btnThinkMore"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/btn_outline_gray"
+                android:gravity="center"
+                android:text="I'll think more"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btnDoPurchase"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_outline_green"
+                android:gravity="center"
+                android:text="Purchase"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Скроллруемый контент -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutConfirmButtons"
+            android:layout_marginBottom="12dp"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Баланс в правом верхнем углу -->
+                <LinearLayout
+                    android:id="@+id/topBalanceBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/btn_outline_cyan"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_on_point"
+                        app:tint="#00BCD4" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="900.00"
+                        android:textColor="#00BCD4"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAreYouSure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topBalanceBar"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Are you sure?"
+                    android:textColor="#00BCD4"
+                    android:textSize="42sp"
+                    android:fontFamily="sans-serif-light" />
+
+                <ImageView
+                    android:id="@+id/ivQuestionMark"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_below="@id/tvAreYouSure"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/question" />
+
+                <View
+                    android:id="@+id/dividerConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ivQuestionMark"
+                    android:layout_marginTop="24dp"
+                    android:background="#55FFFFFF" />
+
+                <!-- Список покупок -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dividerConfirm"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your items"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="809"
+                                android:textColor="#00BCD4"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginRight="6dp"/>
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_on_point"
+                                app:tint="#00BCD4"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Пример строк из списка -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp"><TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="Artifact" android:textColor="#FFFFFF" /><TextView android:layout_width="50dp" android:layout_height="wrap_content" android:text="(x1)" android:textColor="#FFFFFF" /><TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="1x = 560 ONP" android:textColor="#888888" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="560 ONP" android:textColor="#00BCD4" /></LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp"><TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="&quot;Beta&quot; Frame" android:textColor="#FFFFFF" /><TextView android:layout_width="50dp" android:layout_height="wrap_content" android:text="(x1)" android:textColor="#FFFFFF" /><TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="1x = 30 ONP" android:textColor="#888888" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30 ONP" android:textColor="#00BCD4" /></LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#55FFFFFF" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="All items will be added to your account or app account within a short time. If you encounter any issues, please contact our support."
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your balance after transaction will be"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="91 ONP"
+                            android:textColor="#00BCD4"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- ================= 2. ЭКРАН ЗАГРУЗКИ (Processing) ================= -->
+    <RelativeLayout
+        android:id="@+id/stateProcessing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivLoadingDots"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/anim_loading_dots" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLoadingDots"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Processing, please wait..."
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="This may take a while"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- ================= 3. ЭКРАН УСПЕХА (Success) ================= -->
+    <RelativeLayout
+        android:id="@+id/stateSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSuccessTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="Purchase\nsuccessful!"
+            android:textColor="#4CAF50"
+            android:textSize="46sp"
+            android:fontFamily="sans-serif-light" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/tvSuccessTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/checkmark" />
+
+        <TextView
+            android:id="@+id/btnBackToApp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_outline_blue"
+            android:gravity="center"
+            android:text="Back to App's page"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- ================= 4. ЭКРАН ОШИБКИ (Failed) ================= -->
+    <RelativeLayout
+        android:id="@+id/stateFailed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvFailedTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="Purchase\nfailed!"
+            android:textColor="#F44336"
+            android:textSize="46sp"
+            android:fontFamily="sans-serif-light" />
+
+        <ImageView
+            android:id="@+id/ivCrossRed"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/tvFailedTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/cross" />
+
+        <!-- ИСПРАВЛЕНО: Теперь нажимая на эту надпись мы перейдем в новое окно деталей -->
+        <TextView
+            android:id="@+id/btnSeeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivCrossRed"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="See details..."
+            android:textColor="#00BCD4"
+            android:textSize="22sp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif-light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btnBackToShop"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/btn_outline_gray"
+                android:gravity="center"
+                android:text="Back to shop page"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/btnTryAgain"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_outline_blue"
+                android:gravity="center"
+                android:text="Try again"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

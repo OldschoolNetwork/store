@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.iml
+*.apk
+*.jks
+*.keystore
+*.p12
+*RECOVERY_PRIVATE*
+*.log

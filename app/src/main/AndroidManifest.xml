@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oldschoolnetwork.store">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".StoreApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <activity
+            android:name=".StoreMainActivity"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="oldschoolnetwork.online" android:pathPrefix="/store"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MediaViewerActivity" android:theme="@style/Theme.AppCompat.NoActionBar"  />
+        <activity android:name=".PointsShopActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".CheckoutActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".PaymentProcessActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".PaymentDetailsActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".SettingsActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:exported="true" />
+        <activity android:name=".AboutActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:exported="true" />
+        <activity android:name=".LibraryActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:exported="true" />
+        <activity android:name=".WalletActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".StoreNotFoundActivity" android:exported="false"/>
+        <service android:name=".AppUpdateService" android:exported="false"/>
+        <receiver android:name=".AppUpdateReceiver" android:exported="false"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"/></intent-filter></receiver>
+        <activity android:name=".StoreMaintenanceActivity" android:exported="false"/>
+        <activity android:name=".PublicProfileActivity" android:exported="false"/>
+    </application>
+</manifest>
