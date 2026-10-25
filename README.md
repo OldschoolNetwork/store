@@ -1,8 +1,25 @@
+<p align="center">
+  <img src="docs/branding/app-icon.png" width="96" alt="Application icon">
+</p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/branding/oldschool-network-dark.svg">
+    <img src="docs/branding/oldschool-network-light.svg" width="200" alt="Oldschool Network">
+  </picture>
+</p>
+
 # ON Store
 
 The application and game store for Oldschool Network.
 
 Current alpha: **0.38** (version code 14). Android 4.0 / API 14 or later.
+
+## Screenshots
+
+<p>
+  <img src="docs/screenshots/catalogue.png" width="240" alt="Application catalogue">
+  <img src="docs/screenshots/application.png" width="240" alt="Application details and media">
+</p>
 
 ## Features
 
